@@ -1,0 +1,1 @@
+export const defaultImages = require.context('../assets/images',true);
