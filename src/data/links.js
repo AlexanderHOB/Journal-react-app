@@ -2,31 +2,37 @@ export const links = [
     {
         'name':'Dashboard',
         'icon':'dashboard',
-        'color':'#ffff'
+        'color':'#ffff',
+        'link':'/'
     },
     {
-        'name':'Users',
-        'icon':'user',
-        'color':'#ffff'
+        'name':'Notes',
+        'icon':'notepad',
+        'color':'#ffff',
+        'link':'/notes'
     },
     {
         'name':'Messages',
         'icon':'message-square-detail',
-        'color':'#ffff'
+        'color':'#ffff',
+        'link':'/messages'
     },
     {
         'name':'Favorites',
         'icon':'bookmark-star',
-        'color':'#ffff'
+        'color':'#ffff',
+        'link':'/start'
     },
     {
         'name':'Data',
         'icon':'data',
-        'color':'#ffff'
+        'color':'#ffff',
+        'link':'/data'
     },
     {
         'name':'Analytics',
         'icon':'chart',
-        'color':'#ffff'
+        'color':'#ffff',
+        'link':'/analitics'
     },
 ]

@@ -1,0 +1,125 @@
+.notes__{
+    &screen{
+        width:100%;
+        height:100%;
+        display:grid;
+        grid-template-columns: 100%;
+
+        column-gap: 10px;
+    }
+    &list{
+    display:flex;
+    flex-flow: wrap column;
+    align-items:center;
+    justify-content:flex-start;
+        &-header{
+            height: 50px;
+            width:100%;
+            text-align:center;
+            color:$primary-color;
+            letter-spacing:.9px;
+            font-weight: 400;
+            transition:0.5s ease;
+            cursor:pointer;
+            border-radius: 5px;
+            margin: 8px 0 ;
+            &:hover{
+                background-color:rgb(248, 241, 250);
+                color:darken($primary-color,40);
+            }
+        }
+        &-notes{
+            padding: 10px 0px;
+            display:flex;
+            flex-flow: wrap column;
+            width:100%;
+        }
+    }
+}  
+.notes__card{
+    &-note{
+        height: 70px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0.5px 1px 1px lighten($primary-color,10);
+        padding: 10px 5px;
+        text-align: center;
+        cursor:pointer;
+        transition: 0.5s ease;
+        // color: $black-color;
+        &:hover{
+            background-color:rgb(248, 241, 250);
+            box-shadow: 1px 1px 3px lighten($primary-color,10);
+        }
+        & h4{
+            font-size: 1.1em;
+        }
+        & p{
+            font-size: 0.9em;
+        }
+        & h4,p{
+            margin:0;
+            padding: 2px 3px;
+        }
+    }
+    &-title{
+        padding: 5px 0;
+    }
+}
+.note__new-note{
+    & form{
+        padding: 0 10px;
+        display: flex;
+        flex-flow: wrap column;
+        
+    }
+    & .note__actions{
+        width:100%;
+        display:flex;
+        flex-flow: wrap column;
+        align-items:center;
+        & input{
+            width: 100% ;
+        }
+
+    }
+    & .note__new-title{
+        width: 100%;
+        padding: 10px 5px;
+        border:none;
+        font-size: 1.5em;
+        outline:none;
+        border-bottom: 1px solid lighten($primary-color,10);
+        margin-bottom: 10px;
+        color: $black-color;
+    }
+    & .note__new-body{
+        width: 100%;
+        border:none;
+        outline:none;
+        padding: 10px 5px;
+        font-size: 1.1em;
+        height: 500px;
+        line-height: 24px;
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    .notes__{
+        &screen{
+            grid-template-columns: 30% auto;
+            
+        }
+    }
+    .note__new-note{
+        & .note__actions{
+            flex-direction: row;
+            justify-content: space-around;
+            & input{
+                width: 45%;
+            }
+        }
+    }
+}

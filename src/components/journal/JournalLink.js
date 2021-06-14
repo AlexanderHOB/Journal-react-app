@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export const JournalLink = ({name,icon,color='#fff'}) => {
+export const JournalLink = ({name,icon,color='#fff',link=''}) => {
     return (
-        <NavLink to='/' 
+        <NavLink exact to={link}
             className='journal__nav-link'
             activeClassName='active'
         >

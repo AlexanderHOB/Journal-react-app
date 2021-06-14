@@ -31,6 +31,14 @@
         width: 40px;
     }
 }
+.journal__header-user{
+    display:flex;
+    flex-flow: wrap row;
+    align-items:center;
+    & > p{
+        padding: 0px 3px;
+    }
+}
 //navbar
 .journal__nav{
     position:fixed;
@@ -70,8 +78,19 @@
         color:$primary-color-light;
         margin-bottom: 1.5rem;
         transition:.3s;
-        &:hover{
-            color: $white-color;
+        & box-icon{
+            transition:.5s;
+        };
+        & > span{
+            transition:.5s;
+        }
+        &:hover {
+            & box-icon{
+                transform:rotate(5deg) scale(1.02) translateZ(0);
+            }
+            & > span{
+                color:$white;
+            }
         }
     
     }
@@ -91,6 +110,18 @@
     }
 }
 
+.journal__container{
+    display: flex;
+    max-width:100%;
+    margin: $header-height 0 0 0;
+    height:calc(100vh - #{$header-height});
+    justify-content: center;
+    align-items: center;
+    &-message{
+        font-size:3em;
+        text-align: center;
+    }
+}
 @media screen and (min-width: 768px){
     body{
         // margin: ($header-height + 1rem) 0 0 0;
@@ -109,7 +140,11 @@
             }
         }
     }
-
+    .journal__container{
+        margin: ($header-height + 1rem ) 0 0 $nav-width ;
+        height: calc(100vh - 4rem) ;
+        
+    }
     .journal__nav{
         left: 0;
         padding: 1rem 1rem 0 0;
@@ -125,3 +160,6 @@
         padding-left: ($nav-width + 188px);
     }
 }
+
+
+// Journal Nothings

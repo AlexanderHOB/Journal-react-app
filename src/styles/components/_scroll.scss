@@ -1,0 +1,15 @@
+textarea::-webkit-scrollbar {
+    width: 0.5em;
+  }
+   
+  textarea::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(183, 42, 211, 0.3);
+
+  }
+   
+  textarea::-webkit-scrollbar-thumb {
+    background-color: lighten($primary-color,10);
+    outline: 1px solid $black-color;
+    border-radius:50px;
+
+  }

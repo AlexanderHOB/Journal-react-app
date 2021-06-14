@@ -1,5 +1,11 @@
 @import './base/settings';
 @import './base/base';
 //components
+@import './components/buttons';
+@import './components/alerts';
+@import './components/loading';
+@import './components/scroll';
+
 @import './components/journal';
 @import './components/login';
+@import './components/notes';

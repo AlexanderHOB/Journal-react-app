@@ -1,4 +1,5 @@
 .login__section{
+    overflow-y: hidden;
     position: relative;
     min-height: 100vh;
     background-color: $white-color;
@@ -40,11 +41,11 @@
                     margin-bottom: 10px;
                     color: $black-color;
                 }
-                & input {
+                & .text-box {
                     width: 100%;
                     padding: 10px;
                     background-color:$white-color;
-                    color: highlight($black-color,4);
+                    color: lighten($black-color,4);
                     border: none;
                     outline: none;
                     box-shadow: none;
@@ -52,15 +53,7 @@
                     margin: 8px 0;
                     letter-spacing: 1px;
                     font-weight: 300;
-                    &[type='submit']{
-                        max-width: 100%;
-                        background-color:$primary-color;
-                        color: $white-color;
-                        cursor:pointer;
-                        font-size: 1em;
-                        font-weight: 500;
-                        transition:0.5s;
-                    }
+                    border-radius: 5px;
                 }
                 & .login__signup{
                     text-align: center;
@@ -97,7 +90,7 @@
         }
     }
 }
-@media screen and (max-width:550px){
+@media screen and (max-width:600px){
     .login_container-img{
         display: none;
     }
@@ -105,4 +98,28 @@
         width:100%  !important;
         padding: 25px !important; 
     }
+}
+
+.item-enter {
+    opacity: 0;
+}
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.item-exit {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+.item-exit-active {
+    opacity: 0;
+    transform: translate3d(-2000px,0,0);
+    transition: all 500ms ease-in;
+}
+
+
+
+
+.errorInput{
+    border: 1px solid red !important;
 }

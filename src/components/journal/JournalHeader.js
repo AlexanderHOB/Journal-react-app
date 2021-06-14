@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {useSelector} from 'react-redux';
 import {defaultImages} from '../../helpers/images';
 import 'boxicons';
 import { JournalNavbar } from './JournalNavbar'
@@ -7,6 +8,7 @@ import { JournalNavbar } from './JournalNavbar'
 
 export const JournalHeader = () => {
     const [isActive, setActive] = useState(false);
+    const user = useSelector(state=>state.auth);
     const handleToggle = ()=>{
         setActive(!isActive);
     }
@@ -22,11 +24,21 @@ export const JournalHeader = () => {
                 }
                 
             </div>
-            <div className="journal__header-img">
-                <img 
-                src={defaultImages("./ale.png").default } 
-                alt='ale' />
+            <div className="journal__header-user">
+                <p>
+                    {user.name}
+                </p>
+                <div className="journal__header-img">
+                    <img 
+                    src={
+                        (user.photo !== null) 
+                            ? user.photo
+                            :defaultImages("./ale.png").default
+                        }
+                    alt={user.name} />
+                </div>
             </div>
+           
         </header>
         <JournalNavbar value={isActive}/>
 
