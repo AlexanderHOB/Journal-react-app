@@ -6,7 +6,6 @@ import {JournalNothing} from '../journal/JournalNothing';
 
 export const NotesScreen = () => {
     const {activeNote} = useSelector(state =>state.notes);
-    console.log(activeNote)
     return (
         <section className="notes__screen">
             <ListNotes/>
